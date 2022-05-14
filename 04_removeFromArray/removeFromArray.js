@@ -5,7 +5,7 @@ const removeFromArray = function(arr, ...items) {
         newArr = newArr.filter(e => i !== e);
     }
 
-    return newArr;
+    return newArr;  
 };
 
 // Do not edit below this line
