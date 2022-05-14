@@ -2,7 +2,7 @@ const findTheOldest = function(people) {
     let oldestIdx = 0;
     let oldestAge = 0;
     for (person of people) {
-        const age = person.yearOfDeath - person.yearOfBirth;
+        const age = (person?.yearOfDeath ?? 2022) - person.yearOfBirth;
         if(age > oldestAge)
             oldestIdx = people.indexOf(person);
         oldestAge = Math.max(oldestAge, age);
