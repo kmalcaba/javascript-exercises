@@ -7,6 +7,8 @@ const caesar = function(str, num) {
             let charCode = str.charCodeAt(i) + num;
             if ((charCode > 90 && charCode < 97) || (charCode > 122 && charCode < 97) )
                 charCode -= 26;
+            else if (charCode < 65)
+                charCode += 26;
             newStr += String.fromCharCode(charCode);
         }
         else
