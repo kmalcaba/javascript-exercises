@@ -3,6 +3,9 @@ const caesar = function(str, num) {
 
     while (num > 26)
         num -= 26;
+    
+    while (num < -26)
+        num += 26;
 
     for (let i = 0; i < str.length; i++) {
         const c = str.charAt(i);
